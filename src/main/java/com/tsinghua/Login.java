@@ -34,7 +34,10 @@ public class Login extends HttpServlet {
 		response.setContentType("text/html;charset=gbk");
 		PrintWriter pw=response.getWriter();
 		pw.println("<html>");
-		pw.println("<body>");
+		pw.println("<body bgcolor=#CED3FF>");
+		
+		pw.println("<img src=imgs/timg.gif width=300px height=90px><hr><center>");
+		//pw.println("<img src=imgs/me.gif>");
 		//得到error信息
 		String info=request.getParameter("info");
 		if(info!=null) {
@@ -44,8 +47,11 @@ public class Login extends HttpServlet {
 		pw.println("<form action=logincl method=post>");
 		pw.println("用户名：<input type=text name=username><br><br>");
 		pw.println("密码：<input type=password name=passwd><br><br>");
+		pw.println("<input type=checkbox name=keep value=2>两周内不再重新登陆<br>");
+		
 		pw.println("<input type=submit value=loing><br>");
 		pw.println("</form>");
+		pw.println("</center><hr><img src=imgs/sello.gif width=300px height=90px>");
 		pw.println("</body>");
 		pw.println("</html>");
 	}
